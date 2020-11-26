@@ -1,6 +1,6 @@
-import {RECEIVE_TODOS, RECEIVE_TODO} from '../actions/todo_actions';
+import { RECEIVE_TODOS, RECEIVE_TODO } from '../actions/todo_actions';
 
-const preloadedState = {
+const initialState = {
     1: {
         id: 1,
         title: 'wash car',
@@ -15,7 +15,7 @@ const preloadedState = {
     }
 }
 
-const todosReducer = (currentState = preloadedState, action)=>{
+const todosReducer = (currentState = initialState, action)=>{
     Object.freeze(currentState);
     let nextState = Object.assign({}, currentState);
     switch (action.type) {
