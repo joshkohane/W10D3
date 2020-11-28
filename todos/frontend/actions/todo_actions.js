@@ -1,5 +1,6 @@
 export const RECEIVE_TODO = 'RECEIVE_TODO';
 export const RECEIVE_TODOS = 'RECEIVE_TODOS';
+export const REMOVE_TODO = 'REMOVE_TODO';
 
 export const receiveTodo = (todo) => {
     return {
@@ -12,5 +13,13 @@ export const receiveTodos = (todos) => {
     return {
         type: RECEIVE_TODOS,
         todos
+    };
+};
+
+export const removeTodo = (todo) => {
+    // debugger
+    return {
+        type: RECEIVE_TODO,
+        todo
     };
 };
