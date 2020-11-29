@@ -5,7 +5,6 @@ class StepListItem extends React.Component {
     constructor(props) {
         super(props);
         this.updateStep = this.updateStep.bind(this);
-
     }
 
     updateStep(e) {
@@ -14,7 +13,7 @@ class StepListItem extends React.Component {
             this.props.step,
             {done: !this.props.step.done }
         )
-        receiveStep(newStep)
+        this.props.receiveStep(newStep)
     }
 
     render() {
@@ -31,14 +30,3 @@ class StepListItem extends React.Component {
 }
 
 export default StepListItem;
-
-// updateTodo(e) {
-//     e.preventDefault();
-//     let newTodo = Object.assign({},
-//         this.props.todo,
-//         { done: !this.props.todo.done }
-//     )
-//     this.props.receiveTodo(newTodo);
-// }
-
-{/* <button onClick={this.updateTodo}>{(this.props.todo.done) ? 'Undo' : 'Done'}</button> */}

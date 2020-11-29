@@ -17,9 +17,9 @@ export const receiveTodos = (todos) => {
 };
 
 export const removeTodo = (todo) => {
-    // debugger
+    debugger
     return {
-        type: RECEIVE_TODO,
+        type: REMOVE_TODO,
         todo
     };
 };

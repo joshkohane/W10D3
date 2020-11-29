@@ -15,7 +15,7 @@ const initialState = {
     }
 }
 
-const todosReducer = (currentState = initialState, action)=>{
+const todosReducer = (currentState = initialState, action) => {
     Object.freeze(currentState);
     let nextState = Object.assign({}, currentState);
     switch (action.type) {
@@ -32,6 +32,8 @@ const todosReducer = (currentState = initialState, action)=>{
             nextState = newTodos;
             return nextState
         case REMOVE_TODO:
+            debugger
+            nextState = Object.assign({}, currentState)
             delete nextState[action.todo.id];
             return nextState;
         default:

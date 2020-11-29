@@ -19,7 +19,7 @@ export const receiveSteps = (steps) => {
 export const removeStep = (step) => {
     // debugger
     return {
-        type: RECEIVE_STEP,
+        type: REMOVE_STEP,
         step
     };
 };

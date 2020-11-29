@@ -1,4 +1,4 @@
-import { RECEIVE_STEPS, RECEIVE_STEP, REMOVE_STEP } from '../actions/todo_actions';
+import { RECEIVE_STEPS, RECEIVE_STEP, REMOVE_STEP } from '../actions/step_actions';
 
 const initialState = {
     1: { // this is the step with id = 1
@@ -32,6 +32,7 @@ const todosReducer = (currentState = initialState, action) => {
             nextState = newSteps;
             return nextState
         case REMOVE_STEP:
+            nextState = Object.assign({}, currentState)
             delete nextState[action.step.id];
             return nextState;
         default:
